@@ -1,8 +1,6 @@
 #include "matplotlibcpp.h"
 #include "utilsUnit.h"
 #include <vector>
-
-
 namespace plt = matplotlibcpp;
 
 double continuousSignal(double t, double f0, double f1)

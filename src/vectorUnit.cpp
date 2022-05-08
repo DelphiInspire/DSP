@@ -111,7 +111,7 @@ float vectorMag(const TVector &vec) {
     float magSq = 0.0;
 
     for (auto item: vec.v) {
-        magSq += item*item;
+        magSq += item*item;//pow(item, 2)
     }
 
     if(magSq > 0)
@@ -137,7 +137,7 @@ TVector operator*(float scalar, TVector vec) {
 
 float correlation(const TVector &a, const TVector &b) {
     if (a.v.size() != b.v.size())
-        return 0.0;
+        return 0.0;//return 0 mean that vectors not correlate to each other, exception will be better
 
     float dotProduct = a * b;
     float magA = vectorMag(a);
